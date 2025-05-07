@@ -24,11 +24,15 @@ export < r_block
 echo Exit Code: $?
 
 #echo
+export c='ho -n' n='nnnnn'
 echo $var1 $var2 $var3 $var4 $?var4 $var5?
 echo concatenated: $var1$var2
-echo just            one              space here!      !   -n      !       ! 
+echo just            one              space here!      !   -n      !       !
 echo -n -nnnnnnnnnnnnnnnnnnnnnnn -nnmn ciao
+echo -n -nnnnnn"nnn"nnnnnnnnnnnnnn -nnmn ciao
 echo -n -nnnnn n - nnn ciao
+ec$c ciao
+echo -n$n ciao
 echo 'hello there' > w_block
 echo Exit Code: $?
 echo 'hello there' < r_block
@@ -80,6 +84,10 @@ cd ..
 export PWD
 
 #exit
+
+exit a | exit a a | exit 1 a | exit a 1
+echo Exit Code: $?
+
 exit 1 | exit 2 | exit 3
 echo Exit Code: $?
 
